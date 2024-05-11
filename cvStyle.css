@@ -1,10 +1,13 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
     background-color: lightcyan;
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: center;
+    min-height: 100vh;
 }
-nav{
+
+nav {
     display:flex ;
     width: 84%;
     margin: auto;
@@ -18,123 +21,206 @@ nav ul li {
     list-style: none;
     margin: 10px 20px;
 }
+
 nav ul li a {
     text-decoration: none;
     color:#000;
     font-weight: bold;
 }
-nav ul li a:hover {
-    color:#6f4fd1;
 
+nav ul li a:hover {
+    color: #6f4fd1;
 }
+
 .main {
-    display: flex;
-    justify-content: space-around;
-    margin: 50px auto;
-    max-width: 1200px;
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
     background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto; 
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
 }
 
 /* Sol kısım stilleri */
-.SolKısım {
-    width: 45%;
+.Solkisim {
+    position: relative;
+    background-color: lightblue;
+    padding: 35px;
+    
 }
 
-.profile img {
-    display: block;
-    margin: 0 auto;
+.profile_txt {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #fff;
 }
 
-.SolKısım h2 {
-    text-align: center;
-    margin-bottom: 10px;
+.profile_resmi {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
 }
 
-.SolKısım h3 {
-    text-align: center;
-    color: #666;
-}
-
-.İlitişim ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.İlitişim ul li {
-    margin-bottom: 10px;
-}
-
-.İlitişim ul li img {
-    width: 20px;
-    vertical-align: middle;
-    margin-right: 5px;
-}
-
-.Hakkımda p {
-    text-align: justify;
-}
-
-.Beceriler ul {
-    list-style-type: none;
-}
-
-.Beceriler ul li {
-    margin-bottom: 5px;
-}
-
-.Diller ul {
-    list-style-type: none;
-}
-
-.Diller ul li {
-    margin-bottom: 5px;
-}
-
-/* Sağ kısım stilleri */
-.SagKısım {
-    width: 45%;
-}
-
-.İsDeneyim .DisLab, .İsDeneyim .Hamza, .İsDeneyim .kutuphane {
-    margin-bottom: 20px;
-}
-
-.İsDeneyim .DisLab p, .İsDeneyim .Hamza p, .İsDeneyim .kutuphane p {
-    font-weight: bold;
-}
-
-.İsDeneyim .DisLab ul, .İsDeneyim .Hamza ul, .İsDeneyim .kutuphane ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.İsDeneyim .DisLab ul li, .İsDeneyim .Hamza ul li, .İsDeneyim .kutuphane ul li {
-    margin-bottom: 5px;
-}
-
-.egitim table {
+.profile_resmi img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    border-collapse: collapse;
+    height: 100%;
+    object-fit: cover;
 }
 
-.egitim td, .egitim th {
-    padding: 8px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
+.profile_txt h2 {
+    color: #000000;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
 }
 
-.egitim tr:hover {
-    background-color: #f2f2f2;
+.profile_txt h2 span {
+    font-size: 0.6em;
+    font-weight: 300;
+}
+.İlitisim{
+    padding-top: 20px;
+}
+.title{
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+     letter-spacing: 1px;
+
+}
+.İlitisim ul {
+    padding-left: 0; /* Listenin sol kenar boşluğunu sıfırla */
+    justify-content: space-between; /* Öğeler arasındaki mesafeyi artır */
+    flex-wrap: wrap; /* Eğer ekran daralırsa öğelerin bir alt satıra geçmesini sağlar */
+
+
+}
+.İlitisim ul li {
+    list-style: none;
+    margin: 12px 0; /* Yukarı ve aşağı boşluk ayarla */
+    flex: 1; /* Öğelerin esnek boyutlandırılmasını sağlar */
+    
+}
+.İlitisim ul li span{
+    font-weight: 400;
+}
+.egitim ul {
+    padding-left: 0; /* Listenin sol kenar boşluğunu sıfırla */
+
+}
+.egitim ul li {
+    margin: 10px;
+    list-style: none;
+}
+.egitim h5{
+    color: dimgrey;
+    font-weight: 800;
+
 }
 
-/* Link stilleri */
-a {
-    color: #0366d6;
-    text-decoration: none;
+.egitim h4{
+    font-weight: 300;;
+}
+.Diller ul {
+    padding-left: 0;
+}
+.Diller ul li {
+    list-style: none;
+    margin: 10px;
+}
+.Diller .yuzde{
+    position: relative;
+    width: 100%;
+    height: 7px;
+    background: lightcyan;
+    display: block;
+    margin-top: 5px;
+
+}
+.Diller .yuzde div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background:darkslateblue;
 }
 
-a:hover {
-    text-decoration: underline;
+
+.SagKisim {
+    position: relative;
+    background-color: rgb(248, 248, 233);
+    padding: 40px;
+   
+}
+.Hakkımda {
+    margin-bottom: 0;
+}
+.SagKisim .titleh2{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    color: darkslateblue;
+
+}
+.Beceriler .yuzde{
+    position: relative;
+    width: 100%;
+    height: 9px;
+    background: lightsteelblue;
+    display: block;
+    margin-top: 5px;
+
+}
+.Beceriler ul {
+    padding-left: 0;
+}
+.Beceriler ul li {
+    list-style: none;
+    margin: 10px;
+}
+.Beceriler .yuzde div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background:darkslateblue;
+}
+.SagKisim .Hakkımda p{
+    color: #333;
+}
+.İsDeneyim .is{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+
+}
+.İsDeneyim .is .tarih-donem{
+    min-width: 150px;
+
+}
+.İsDeneyim .is .tarih-donem h5{
+    text-transform: uppercase;
+    color: #8a8e90
+
+}
+.İsDeneyim .is .text h4{
+    text-transform: uppercase;
+    font-size: 15px;
+    color:lightseagreen;
+
+
+
 }
