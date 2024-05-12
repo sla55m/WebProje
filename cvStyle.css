@@ -27,6 +27,9 @@ nav ul li a {
     color:#000;
     font-weight: bold;
 }
+nav ul li.current a {
+    color:rgb(0, 132, 255) /* İlgili sayfa aktifken renk değişimi */
+}
 
 nav ul li a:hover {
     color: #6f4fd1;
@@ -184,6 +187,7 @@ nav ul li a:hover {
     margin-top: 5px;
 
 }
+
 .Beceriler ul {
     padding-left: 0;
 }

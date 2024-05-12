@@ -14,6 +14,9 @@ nav{
     align-items: center;
     justify-content: space-between;
 }
+nav ul li.current a {
+    color: rgb(0, 132, 255) /* İlgili sayfa aktifken renk değişimi */
+}
 
 nav ul li {
     display: inline-block;

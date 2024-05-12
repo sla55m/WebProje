@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: lightcyan;
+}
+nav{
+    display:flex ;
+    width: 84%;
+    margin: auto;
+    padding: 20px 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a {
+    text-decoration: none;
+    color:#000;
+    font-weight: bold;
+}
+nav ul li a:hover {
+    color:#6f4fd1;
+
+}
+nav ul li.current a {
+    color: rgb(0, 132, 255); /* İlgili sayfa aktifken renk değişimi */
+  }
+  .main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+
+
+
+.taitle {
+    text-align: center;
+}
+
+.Takim_Hakkinda {
+    margin-bottom: 40px;
+}
+
+.onemli_oyuncular {
+    margin-bottom: 40px;
+}
+
+.title {
+    text-align: center;
+}
+
+.oyucu_adi {
+    text-align: center;
+}
+
+.oyuncu_bilgileri {
+    margin-bottom: 20px;
+}
+
+/* Özel stiller */
+.yasin_resmi,
+.Takim_resmi,
+.Oyucu_resmi {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}

@@ -18,6 +18,9 @@ nav ul li {
     list-style: none;
     margin: 10px 20px;
 }
+nav ul li.current a {
+  color: rgb(0, 132, 255); /* İlgili sayfa aktifken renk değişimi */
+}
 nav ul li a {
     text-decoration: none;
     color:#000;
