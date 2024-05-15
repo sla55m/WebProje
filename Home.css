@@ -15,6 +15,7 @@
 
 nav ul li.current a {
     color:darkturquoise;/* İlgili sayfa aktifken renk değişimi */
+    
 }
 nav {
     display:flex ;
@@ -24,6 +25,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     
+    
 }
 
 
@@ -32,6 +34,7 @@ nav ul li {
     display: inline-block;
     list-style: none;
     margin: 20px 50px;
+    
 }
 nav ul li a {
     text-decoration: none;
@@ -53,6 +56,7 @@ nav ul li a:hover {
     border-radius: 30px;
     transition: 0.4s;
     border: 2px solid transparent; /*diğer nav elemanları harketmesin diye şifaf 2px ekliyoruz  */
+    margin-bottom: 8rem;
 }
 
 .LoginSayfasi a:hover {
@@ -64,12 +68,18 @@ nav ul li a:hover {
     margin-left: 8%;
     margin-top:10%;
 }
-.bilgiler h1 {
+ h1 {
    
     color:#212121;
     margin: 1.7rem 0;
     font-size: 4.65rem;
     
+}
+p{
+    letter-spacing: 1px;
+    line-height: 1.8rem;
+    font-size: 1.3rem;
+    color: darkslateblue;
 }
 .bilgiler h3{
     font-size: 1.5rem;
@@ -110,6 +120,7 @@ nav ul li a:hover {
     position: absolute;
     bottom: 0;
     right: 100px;
+    margin-bottom: 15px;
 }
 .resimler img {
     height: 100%;
@@ -128,6 +139,52 @@ nav ul li a:hover {
 .resimler:hover .Selim{
     left: 45%;
     
+}
+.hakkimda {
+    background: lightskyblue;
+    padding: 2rem;
+    display: flex;  
+    
+}
+.hakkimda .resim{
+    width: 25%;
+}
+
+.hakkimda .resim img{
+    width: 85%;
+    margin-left: 20rem;
+
+}
+.hakkimda .text{
+    width: 25%;
+    margin-left: 40rem;
+
+}
+.EtkinliklerHakinda {
+    background: rgb(84, 178, 237);
+    
+    padding: 8rem;
+
+}
+.text h1 {
+    text-align: center;
+}
+.box{
+    display: flex;
+    justify-content:space-between;
+}
+.etkinlik_{
+    width: 300px;
+    background-color: lightcyan;
+    border-radius: 20px;
+    padding: 1.3rem 2rem;
+    text-align: center; 
+}
+.etkinlik_ img{
+    
+    margin: 2rem auto; /* Resmi yatay olarak ortalamak  */
+    
+
 }
 
 
