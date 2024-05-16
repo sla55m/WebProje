@@ -1,7 +1,8 @@
 *{
     margin:0 ;
     padding: 0;
-   }
+}
+
 .main{
    position: relative;
    width: 100%;
@@ -9,23 +10,37 @@
    background:lightcyan;
    font-family: 'Josefin Sans', sans-serif;
 }
+/*----------------------------------------------------
+---------------------Ortak olanlar
+------------------------------------------------------*/
 
-
-  
-
-nav ul li.current a {
-    color:darkturquoise;/* İlgili sayfa aktifken renk değişimi */
+h1 {
+   
+    color:#212121;
+    margin: 1.7rem 0;
+    font-size: 4.65rem;
     
 }
+p{
+    letter-spacing: 1px;
+    line-height: 1.8rem;
+    font-size: 1.3rem;
+    color: darkslateblue;
+}
+.renkli_kelime {
+    color: darkblue;
+}
+
+/*----------------------------------------------------
+---------------------Menu
+------------------------------------------------------*/
 nav {
     display:flex ;
     width: 84%;
     margin: auto;
     padding: 20px 0;
     align-items: center;
-    justify-content: space-between;
-    
-    
+    justify-content: space-between; 
 }
 
 
@@ -46,6 +61,15 @@ nav ul li a:hover {
     color:darkturquoise;
 
 }
+nav ul li.current a {
+    color:darkturquoise;/* İlgili sayfa aktifken renk değişimi */
+    
+}
+
+/*----------------------------------------------------
+---------------------Login Sayfası
+------------------------------------------------------*/
+
 .LoginSayfasi a {
     display: inline-block;
     background-color: darkblue;
@@ -64,23 +88,16 @@ nav ul li a:hover {
     border: 2px solid black;
     color: rgb(0, 0, 0);
 }
+
+/*----------------------------------------------------
+---------------------Ana Ekranda Taitle
+------------------------------------------------------*/
+
 .bilgiler{
     margin-left: 8%;
     margin-top:10%;
 }
- h1 {
-   
-    color:#212121;
-    margin: 1.7rem 0;
-    font-size: 4.65rem;
-    
-}
-p{
-    letter-spacing: 1px;
-    line-height: 1.8rem;
-    font-size: 1.3rem;
-    color: darkslateblue;
-}
+
 .bilgiler h3{
     font-size: 1.5rem;
     
@@ -92,27 +109,29 @@ p{
     margin-left: 0.8rem;
 
 }
-.logo,.ad_soyad{
+.logo,.Baslik{
     cursor:none;
 }
 
-.bilgiler .iletisim{
+/*----------------------------------------------------
+---------------------iletisim bilgiler
+------------------------------------------------------*/
+.iletisim{
     margin-top: 2rem;
     margin-left: 2rem;
 }
-.bilgiler .iletisim img {
+.iletisim img {
     margin-right: 3rem;
     width: 2.5rem;
     transition: 0.6s;
 }
-.bilgiler .iletisim img:hover{
+.iletisim img:hover{
     transform: scale(1.3); /*maus resimlere gelince resim 1.3 boyucek  */
 }
 
-
-.renkli_kelime {
-    color: darkblue;
-}
+/*----------------------------------------------------
+---------------------Ana Sayfada 2 resim
+------------------------------------------------------*/
 
 .resimler{
     width: 45%;
@@ -140,6 +159,12 @@ p{
     left: 45%;
     
 }
+
+
+/*----------------------------------------------------
+---------------------hakkimda kısmı
+------------------------------------------------------*/
+
 .hakkimda {
     background: lightskyblue;
     padding: 2rem;
@@ -160,16 +185,22 @@ p{
     margin-left: 40rem;
 
 }
+
+/*----------------------------------------------------
+---------------------EtkinliklerHakinda
+------------------------------------------------------*/
+
 .EtkinliklerHakinda {
     background: rgb(84, 178, 237);
     
-    padding: 8rem;
+    
+    padding: 2rem;
 
 }
-.text h1 {
+.EtkinliklerHakinda .text h1 {
     text-align: center;
 }
-.box{
+ .box{
     display: flex;
     justify-content:space-between;
 }
@@ -179,13 +210,178 @@ p{
     border-radius: 20px;
     padding: 1.3rem 2rem;
     text-align: center; 
+    margin-right: 2rem;
 }
-.etkinlik_ img{
+.box p{
+    letter-spacing: 1px;
+    line-height: 1.3rem;
+    font-size: 1rem;
+    margin: 10px;
+    color: darkslateblue;
+}
+.EtkinliklerHakinda .etkinlik_ img{
     
     margin: 2rem auto; /* Resmi yatay olarak ortalamak  */
     
 
 }
+/*----------------------------------------------------
+---------------------Sabanca Etkinliği
+------------------------------------------------------*/
+.Etkinliklerim {
+    /* Genel stil */
+    font-family: Arial, sans-serif;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center; /* İçeriği ortala */
+  }
+  
+  .Etkinliklerim h2 {
+    /* Başlık stilleri */
+    color: #0066cc;
+  }
+  
+  .tanim {
+    /* Etkinlik tanımı stil */
+    margin-bottom: 20px;
+    display: flex; /* Kutu ve resimleri yan yana yerleştir */
+    justify-content: center; /* Kutu ve resimleri yatayda ortala */
+    align-items: center; /* Kutu ve resimleri dikeyde ortala */
+  }
+  
+  .tanim .text {
+    /* Etkinlik metni stil */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    flex: 1; /* Metni esnek hale getirerek resimlerle birlikte düzenlemeyi sağlar */
+  }
+  
+  .tanim .text h2 {
+    /* Etkinlik başlığı stil */
+    margin-bottom: 10px;
+  }
+  
+  .tanim .text h2 span {
+    /* Etkinlik tarihi stil */
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .tanim .text h4 {
+    /* Etkinlik açıklama stil */
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .box {
+    /* Kutu stil */
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    flex: 1; /* Kutuyu esnek hale getirerek resimlerle birlikte düzenlemeyi sağlar */
+  }
+  
+  .box img {
+    /* İkon stil */
+    width: 50px;
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  .box h3 {
+    /* Başlık stil */
+    color: #0066cc;
+    margin-bottom: 10px;
+  }
+  
+  .box .txt {
+    /* Metin stil */
+    flex: 1;
+  }
+  
+  .box p {
+    /* Paragraf stil */
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .box a {
+    /* Bağlantı stil */
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .box a:hover {
+    /* Hover efekti */
+    text-decoration: underline;
+  }
+  
+  .Galeri {
+    /* Galeri stil */
+    display: flex;
+    flex-wrap: wrap; /* Resimlerin alt alta sıralanmasını sağla */
+    justify-content: center; /* Resimleri yatayda ortala */
+  }
+  
+  .image {
+    /* Resim stil */
+    flex-basis: 48%;
+    margin-bottom: 20px;
+  }
+  
+  .image img {
+    /* Resim içeriği stil */
+    width: 100%;
+    height: auto;
+  }
+
+/*----------------------------------------------------
+---------------------Footer Kısmı
+------------------------------------------------------*/
+footer {
+    background-color: #000000;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+footer h3 {
+    margin-bottom: 20px;
+    color: darkcyan;
+}
+
+footer p {
+    color: lightsteelblue;
+    margin-bottom: 5px;
+}
+footer .iletisim{
+    text-align: right;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #fffefe;
+}
+
+footer ul li a:hover {
+    color: #007bff;
+}
+
+
 
 
 

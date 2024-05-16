@@ -8,12 +8,18 @@
     <link rel="stylesheet" href="Home.css">
     <link rel="icon" href="resimler/user (2).ico">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    
+
+
 
 </head>
 <body>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <script src="bootstrap/js/jquery-3.7.1.slim.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
     <section class="Home">
         <div class="main">
-            <nav>
+            <nav id="menu">
                 <img  class="logo" src="resimler/dikeylogo.png" alt="saü logo" width="150px" height="200px">
                 <div class="menu">
                     <ul>
@@ -54,7 +60,7 @@
         </div>
 
     </section>
-    <section class="hakkimda">
+    <section class="hakkimda" id="hakkimda">
         <div class="resim">
             <img src="resimler/SELİM ALTIN/Developer activity-bro.png" alt="selim_Developer">
         </div>
@@ -72,14 +78,15 @@
 
         </div>
     </section>
-    <section class="EtkinliklerHakinda">
+    <section class="EtkinliklerHakinda" id="etkinlikler">
+     
         <div class="text">
             <h1><span class=""> <span class="renkli_kelime">Etkinliklerim</span> Hakkında </span></h1>
         </div>
         <div class="box">
             <div class="etkinlik_">
                 <img src="resimler/icon/save-the-planet.png" alt="çevre_kuruma">
-                <h5>Sapanca Kayı Temizliği</h5>
+                <h3>Sapanca Kayı Temizliği</h3>
                 <div class="txt">
                     <p>
                         İlim Yayma Cemiyeti ve Sakarya Üniversitesi iş birliğiyle Sapanca Kıyı Temizliği etkinliğini gerçekleşti ve bu ekibin bir üyesidim.
@@ -90,7 +97,7 @@
             </div>
             <div class="etkinlik_">
                 <img src="resimler/icon/playtime.png" alt="cocuklar_etkinligi">
-                <h5>Bayram etkinliği</h5>
+                <h3>Bayram etkinliği</h3>
                 <div class="txt">
                     <p>
                         Kuran Nesil Kurumu'nun düzenlediği bu özel etkinlik, geçtiğimiz 8 yıldır toplumumuzun çocuklarına bayram sevincini yaşatıyor. Son 5 yıldır ise ben de gönüllü olarak bu değerli etkinlikte yer alıyorum.           
@@ -101,21 +108,34 @@
             </div>
             <div class="etkinlik_">
                 <img src="resimler/icon/film-slate.png" alt="Kisa_Film">
-                <h5>Kısa Film Deneyimi</h5>
+                <h3>Kısa Film Deneyimi</h3>
                 <div class="txt">
                     <p>
-                        kısa film izleyicileri düşündürür, duygusal olarak etkiler ve farklı dünyaları keşfetme fırsatı verir.        
+                        Okulumdan bir ekip arkadaşımla, 2012 yapımı ünlü "My Shoes" filminin benzerini çekerek, kendi tarzımızla taklit ettik ve bir cover versiyonunu yeniden oynadık.
                     </p>
+                    <a href="#Film">daha fazla için </a>
                 </div>
     
             </div>
             <div class="etkinlik_">
                 <img src="resimler/icon/newsletter.png" alt="Haber">
-                <h5>Okul Haber Bülteni Deneyimi</h5>
+                <h3>Okul Haber Bülteni Deneyimi</h3>
                 <div class="txt">
                     <p>
-                        Okul haber bültenleri, okul topluluğunu bilgilendirmek, güncel olayları paylaşmak ve öğrenciler, öğretmenler ve veliler arasında iletişimi güçlendirmek için önemli bir araçtır.       
-                     </p>
+                        2017'de Al-Rowad Eğitim Okulları'nda okurken, Okul Haber Bülteni'nde ana haber spikeri olarak görev aldım ve bu deneyim benim için oldukça değerliydi. Ayrıca, haberlerin yanı sıra özel röportajlar yaparak ve öğrenci etkinliklerini kapsayarak bülteni daha çeşitli hale getirmeye çalıştık.      
+                   </p>
+                   <a href="#haber">daha fazla için </a>
+                </div>
+
+    
+            </div>
+            <div class="etkinlik_">
+                <img src="resimler/icon/tent.png" alt="Haber">
+                <h3>Kamp Deneyimi</h3>
+                <div class="txt">
+                    <p>
+                        Kamp deneyimi, doğayla iç içe olmanın ve açık havada yaşamanın keyifli ve unutulmaz bir yoludur. İster ailecek, ister arkadaşlarla olsun. 
+                    </p>
                 </div>
     
             </div>
@@ -128,70 +148,56 @@
     
     <div class="Etkinliklerim">
         <h2>Etkinliklerim</h2>
-        <div class="Sapanca">
-            <h3 id="sapanca">Sapanca Kayı Temizliği <span>(03.05.2024)</span> </h3>
-            <h4>
-                İlim Yayma Cemiyeti ve Sakarya Üniversitesi iş birliğiyle Sapanca Kıyı Temizliği etkinliğini gerçekleşti ve bu ekibin bir üyesidim.            </h4>
-            <h5>
-                Sapanca Gölü, Türkiye'nin en önemli doğal güzelliklerinden biridir ve Sapanca Kayı, bu güzelliği korumak ve sürdürülebilirliği sağlamak adına oldukça önemli bir rol oynamaktadır. Sapanca Gölü'nün temizliği, su kalitesinin korunması, ekosistemin sağlıklı işleyişi ve bölgede yaşayan canlıların refahı için hayati önem taşır.
-
-                Sapanca Kayı Temizliği, göl ve çevresinin kirliliğini önlemek veya azaltmak, atıkları toplamak ve doğal yaşamı korumak için düzenlenen etkinliklerin genel adıdır. Bu tür temizlik faaliyetleri, göl ve çevresindeki ekosistemi korumak, su kaynaklarını temiz tutmak ve yerel toplulukların bilincini artırmak için son derece önemlidir.
-
-               Bu gibi temizlik etkinlikleri, çevresel bilinci artırır ve toplumda sürdürülebilirlik ve çevre koruma konusunda farkındalık yaratır. Ayrıca, göl ve çevresinin temizlenmesi, bölgede turizmin gelişimine katkıda bulunur ve ekonomik açıdan da önemlidir.
-
-               Sapanca Gölü'nün temizliği ve korunması, sadece bölge halkı için değil, aynı zamanda Türkiye'nin doğal mirasını koruma ve gelecek nesillere aktarma sorumluluğunu da içerir. Bu nedenle, Sapanca Kayı Temizliği gibi etkinliklerin düzenli olarak gerçekleştirilmesi ve desteklenmesi son derece önemlidir.
-            </h5>
-            <div class="Galeri">
-             <div class="image">
-                <img src="resimler/Sapanca/ekip1.JPG" alt="Ekip">
-                <div class="bilgi">
-                  <h2>Resim 1</h2>
-                  <p>Ekip İçi</p>
-                </div>
-              </div>
-              <div class="image">
-                <img src="resimler/Sapanca/ekip2.JPG" alt="Ekip">
-                <div class="bilgi">
-                  <h2>Resim 2</h2>
-                  <p>Ekip İçi</p>
-                </div>
-              </div>
-              <div class="image">
-                <img src="resimler/Sapanca/ekip3.JPG" alt="Ekip">
-                <div class="bilgi">
-                  <h2>Resim 3</h2>
-                  <p>Ekip İçi</p>
-                </div>
-              </div>
-              <div class="image">
-                <img src="resimler/Sapanca/selim.JPG" alt="selim">
-                <div class="bilgi">
-                  <h2>Resim 4</h2>
-                  <p>Selim Sapancada</p>
-                </div>
-              </div>
-              <div class="image">
-                <img src="resimler/Sapanca/ekip1.JPG" alt="Sonuc">
-                <div class="bilgi">
-                  <h2>Resim 6</h2>
-                  <p>Sonuç</p>
-                </div>
-              </div>
-              <div class="Video">
-                <video controls >
-                    <source src="resimler/Sapanca/promo.MP4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="bilgi">
-                  <h2>Video1</h2>
-                  <p>Etkinlik Promosu</p>
-                </div>
-              </div>
+        <section class="tanim">
+            <div class="text">
+                <h2 id="sapanca">Sapanca Kayı Temizliği <span>(03.05.2024)</span> </h2>
+                <div class="line"></div>
+                <h4>
+                    İlim Yayma Cemiyeti ve Sakarya Üniversitesi iş birliğiyle Sapanca Kıyı Temizliği etkinliğini gerçekleşti ve bu ekibin bir üyesidim.
+                </h4>
 
             </div>
 
+        </section>
+        <section class="Sapanca">
+            <div class="box">
+                <div class="etkinlik_">
+                    <img src="resimler/icon/save-the-planet.png" alt="çevre_kuruma">
+                    <h3>Sapanca Kayı Temizliği</h3>
+                    <div class="txt">
+                        <p>
+                            Sapanca Gölü, Türkiye'nin en önemli doğal güzelliklerinden biridir ve Sapanca Kayı, bu güzelliği korumak ve sürdürülebilirliği sağlamak adına oldukça önemli bir rol oynamaktadır. Sapanca Gölü'nün temizliği, su kalitesinin korunması, ekosistemin sağlıklı işleyişi ve bölgede yaşayan canlıların refahı için hayati önem taşır.
+                        </p>
+                        <a href="#sapanca">daha fazla için </a>
+                    </div>
+        
+                </div>
+            </div>
+           
+        
+                <div class="Galeri">
+                
+                  <div class="image">
+                    <img src="resimler/Sapanca/ekip2.JPG" alt="Ekip">
+                   
+                  </div>
+                  <div class="image">
+                    <img src="resimler/Sapanca/ekip3.JPG" alt="Ekip">
+             
+                  </div>
+               
+                
+              
+    
+                </div>
+    
+            
+                
+    
+            
 
-        </div>
+        </section>
+        
         <div class="Bayram_etkinli">
             <h2 id="Bayram">
                 bayram çocuklar etkinliği
@@ -266,8 +272,74 @@
             </div>
 
         </div>
+        <div class="KisaFilm">
+            <h2 id="Film">
+               Kısa Film Deneyimi<span>(My Shoes (2012))</span>
+            </h2>
+            
+            <h4>
+                Reddedilmenin ağırlığı altında ezilen, yırtık pırtık kıyafetleri ve yıpranmış ayakkabılarıyla alay edilen evsiz bir çocuk,
+                parktaki bir bankta sessizce oturuyor. Düşüncelere dalmış genç serseri, asla ortama uyum sağlayamayacağından emindir. Sonuçta bankın diğer tarafında oturan şık giyimli çocuk, hayattaki zıtlıkların mükemmel bir örneğidir. Saf kıskançlık ve birbiriyle çelişen duyguların telaşı muhakemesini bulandırırken, küçük serseri dikkatsiz bir dilek tutar. Ve böylece evren onun arzusunu yerine getirir.
+                <span>Peki diğer tarafta çimler her zaman daha mı yeşildir?</span>
+            </h4>   
+            <div class="galeri">
+                <div class="vid">
+                    <iframe width="1236" height="695" src="https://www.youtube.com/embed/sPaxuc64sHQ" title="سعيد وسلام" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    <div class="bilgi">
+                        <h2>Video1</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Haber">
+            <h2 id="haber">
+                Okul Haber Bülteni Deneyimi
+            </h2>
+            
+            <h4>
+                2017'de Al-Rowad Eğitim okullarına  Okul Haber Bülteni;
+                Okul haber bültenleri, okul topluluğunu bilgilendirmek, güncel olayları paylaşmak ve öğrenciler, öğretmenler ve veliler arasında iletişimi güçlendirmek için önemli bir araçtır.
+                <span>Peki diğer tarafta çimler her zaman daha mı yeşildir?</span>
+            </h4>   
+            <div class="galeri">
+                <div class="vid">
+                    <iframe width="1236" height="695" src="https://www.youtube.com/embed/yd9_-BysCuI" title="النشرة الإخبارية لمدرس الرواد التربوية" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
 
     </div>
-    
+    <footer>
+        <div class="text">
+            <h2><span>Selim</span> Altın</h2>
+            <p>
+
+            </p>
+        </div>
+        <div class="son">
+            
+           
+            <div class="siteHaritasi">
+                <h3>Site Haritası</h3>
+                <ul>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#hakkimda">Hakkımda</a></li>
+                    <li><a href="#etkinlikler">Etkinlikler</a></li>
+                </ul>
+            </div>
+           
+        
+            
+              <div class="iletisim">
+                <h3>İletişim Bilgileri</h3>
+               <a href="https://wa.me/+90551955749/" target="_blank"><img src="resimler/icon/Whatsapp_37229.png" alt="Whatsapp"></a>
+               <a href="https://www.instagram.com/1kur.an_/" target="_blank"><img src="resimler/icon/3721672-instagram_108066.png" alt="instagram"></a>
+               <a href="https://www.facebook.com/profile.php?id=100026062516271&locale=tr_TR" target="_blank"><img src="resimler/icon/1490889652-facebook_82510.png" alt="facebook"></a>
+               <a href="https://snapchat.com/t/XzbEllaz" target="_blank"><img src="resimler/icon/1490889713-snapchat_82531.png" alt="snapchat"></a>     
+            </div>
+            <div class="telifHakki">
+                <p>© 2024 Selim Altın. Tüm hakları saklıdır.</p>
+            </div>
+    </footer>
 </body>
 </html>
