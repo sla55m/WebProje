@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightblue;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+h1 {
+   
+    color:#212121;
+    margin: 1.7rem 0;
+    font-size: 4.65rem;
+    
+}
+p{
+    letter-spacing: 1px;
+    line-height: 1.8rem;
+    font-size: 1.3rem;
+    color: darkslateblue;
+}
+.renkli_kelime {
+    color: darkblue;
+}
+
+nav{
+    display:flex ;
+    width: 84%;
+    margin: auto;
+    padding-top: 2.8rem ;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 0.8rem 1.5rem;
+}
+nav ul li a {
+    text-decoration: none;
+    color:#000;
+    font-weight: bold;
+    transition: 0.4s;
+}
+nav ul li a:hover {
+    color:darkturquoise;
+
+}
+
+nav ul li.current a {
+    color: darkturquoise; /* İlgili sayfa aktifken renk değişimi */
+}
+
+.animeler {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.animeler > div {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.6s;
+}
+
+.animeler > div:hover {
+    transform: translateY(-10px);
+}
+
+.animeler img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.info {
+    padding: 10px;
+}
+
+.info h5 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.info p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.info p span {
+    display: inline-block;
+    margin-left: 5px;
+    background-color: #ff6347;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

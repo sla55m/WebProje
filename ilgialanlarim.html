@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="ilgialanlarim.css">
+</head>
+<body>
+    <nav>
+        <img  class="logo" src="resimler/dikeylogo.png" alt="saü logo" width="150px" height="200px">
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="ozgecmis.html  ">CV</a></li>
+            <li><a href="Sehir.html">Şehir</a></li>
+            <li><a href="Takimim.html">Takımım</a></li>
+            <li><a href="hobiler.html">Eğlence Köşesi </a></li>
+            <li class="current"><a href="ilgialanlarim.html">ilgi alanlarım</a></li>
+            <li ><a href="iletisim.html">İletişim</a></li>
+        </ul>
+      
+    </nav>
+    <div class="taitle">
+        <h1><span class="Baslik">İlgi <span class="renkli_kelime">Alanlarım</span>  </span></h1>
+
+    </div>
+    <div class="animeler"></div>
+    <script>
+        const list = document.querySelector(".animeler")
+
+        fetch('https://anime-db.p.rapidapi.com/anime?page=1&size=20', { method: 'GET', headers: { 'x-rapidapi-key': '438dcaeabfmsh5af4e48c80209d2p1ba5e2jsn9ed7758bcbdd' } })
+            .then((response) => {
+                return response.json()
+            })
+            .then(data => {
+                data.data.map(function (anime) {
+                    list.innerHTML += ` <div>
+                                            <a href="${anime.link}"target="_blank"><img src="${anime.image}" alt=""></a>
+                                            <div className="info">
+                                                <h5>${anime.title}</h5>
+                                                <p>${anime.type}<span>${anime.ranking}</span></p>
+                                            </div>
+                                        </div>`;
+                    console.log(data);
+                })
+            })
+            .catch(error => console.log(error));
+    </script>
+</body>
+</html>
