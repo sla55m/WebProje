@@ -2,48 +2,82 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>İlgi Alanları<main></main></title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+
     <link rel="stylesheet" href="ilgialanlarim.css">
 </head>
 <body>
-    <nav>
-        <img  class="logo" src="resimler/dikeylogo.png" alt="saü logo" width="150px" height="200px">
-        <ul>
-            <li><a href="Home.html">Home</a></li>
-            <li><a href="ozgecmis.html  ">CV</a></li>
-            <li><a href="Sehir.html">Şehir</a></li>
-            <li><a href="Takimim.html">Takımım</a></li>
-            <li><a href="hobiler.html">Eğlence Köşesi </a></li>
-            <li class="current"><a href="ilgialanlarim.html">ilgi alanlarım</a></li>
-            <li ><a href="iletisim.html">İletişim</a></li>
-        </ul>
-      
-    </nav>
-    <div class="taitle">
-        <h1><span class="Baslik">İlgi <span class="renkli_kelime">Alanlarım</span>  </span></h1>
-
-    </div>
-    <div class="animeler"></div>
-    <script>
-        const list = document.querySelector(".animeler")
-
-        fetch('https://anime-db.p.rapidapi.com/anime?page=1&size=20', { method: 'GET', headers: { 'x-rapidapi-key': '438dcaeabfmsh5af4e48c80209d2p1ba5e2jsn9ed7758bcbdd' } })
-            .then((response) => {
-                return response.json()
-            })
-            .then(data => {
-                data.data.map(function (anime) {
-                    list.innerHTML += ` <div>
-                                            <a href="${anime.link}"target="_blank"><img src="${anime.image}" alt=""></a>
-                                            <div className="info">
-                                                <h5>${anime.title}</h5>
-                                                <p>${anime.type}<span>${anime.ranking}</span></p>
-                                            </div>
-                                        </div>`;
-                    console.log(data);
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="Home.html">
+                <img class="logo" src="resimler/dikeylogo.png" alt="saü logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="Home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ozgecmis.html">CV</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Sehir.html">Şehir <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Takimim.html">Takımım</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hobiler.html">Eğlence Köşesi</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="fotografsilik.html">Galeri</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="iletisim.html">İletişim</a>
+                    </li>
+                </ul>
+            </div>
+          
+        </nav>
+      </header>
+      <section class="main">
+        <div class="taitle">
+            <h1><span class="Baslik">İlgi <span class="renkli_kelime">Alanlarım</span>  </span></h1>
+    
+        </div>
+        <div class="animeler"></div>
+         <script>
+            const list = document.querySelector(".animeler")
+    
+            fetch('https://anime-db.p.rapidapi.com/anime?page=1&size=20', { method: 'GET', headers: { 'x-rapidapi-key': '438dcaeabfmsh5af4e48c80209d2p1ba5e2jsn9ed7758bcbdd' } })
+                .then((response) => {
+                    return response.json()
                 })
-            })
-            .catch(error => console.log(error));
-    </script>
+                .then(data => {
+                    data.data.map(function (anime) {
+                        list.innerHTML += ` <div>
+                                                <a href="${anime.link}"target="_blank"><img src="${anime.image}" alt=""></a>
+                                                <div className="info">
+                                                    <h5>${anime.title}</h5>
+                                                    <p>${anime.type}<span>${anime.ranking}</span></p>
+                                                </div>
+                                            </div>`;
+                        console.log(data);
+                    })
+                })
+                .catch(error => console.log(error));
+          </script>
+
+      </section>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>

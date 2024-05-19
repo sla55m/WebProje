@@ -1,4 +1,7 @@
 body {
+   
+}
+.main{
     font-family: Arial, sans-serif;
     background-color: lightblue;
     margin: 0;
@@ -25,36 +28,51 @@ p{
     color: darkblue;
 }
 
-nav{
-    display:flex ;
+/* Custom Styles */
+header {
+    background-color: rgb(208, 252, 252);
+  }
+  
+  nav ul li.current a {
+    color: darkturquoise !important; /* İlgili sayfa aktifken renk değişimi */
+  }
+  
+  nav {
+    display: flex;
+
     width: 84%;
     margin: auto;
-    padding-top: 2.8rem ;
+    padding: 20px 0;
     align-items: center;
     justify-content: space-between;
-    
-}
-
-
-nav ul li {
-    display: inline-block;
+  }
+  
+  nav ul {
+    display: flex;
+    padding: 0;
+  }
+  
+  nav ul li {
     list-style: none;
-    margin: 0.8rem 1.5rem;
-}
-nav ul li a {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
     text-decoration: none;
-    color:#000;
+    color: #000000 !important; /* Normal metin rengi beyaz */
     font-weight: bold;
     transition: 0.4s;
-}
-nav ul li a:hover {
-    color:darkturquoise;
-
-}
-
-nav ul li.current a {
-    color: darkturquoise; /* İlgili sayfa aktifken renk değişimi */
-}
+  }
+  
+  nav ul li a:hover {
+    color: darkturquoise !important; /* Hover metin rengi darkturquoise */
+  }
+  
+  .navbar-brand img.logo {
+    width: 100px;
+    height: 150px;
+  }
+   
 
 .animeler {
     display: grid;
@@ -113,4 +131,70 @@ nav ul li.current a {
 a {
     text-decoration: none;
     color: inherit;
+}
+/* Responsive CSS */
+@media (max-width: 1200px) {
+  .animeler {
+      grid-template-columns: 1fr 1fr;
+  }
+
+  .main {
+      padding: 0 20px;
+  }
+
+  h1 {
+      font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  nav ul {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+  }
+
+  nav ul li {
+      margin: 10px 0;
+  }
+
+  .animeler {
+      grid-template-columns: 1fr;
+  }
+
+  .main {
+      padding: 0 15px;
+  }
+
+  h1 {
+      font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-brand img.logo {
+      width: 80px;
+      height: 120px;
+  }
+
+  .animeler {
+      grid-template-columns: 1fr;
+  }
+
+  .main {
+      padding: 0 10px;
+  }
+
+  h1 {
+      font-size: 2rem;
+  }
+
+  p {
+      font-size: 1rem;
+  }
 }

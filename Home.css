@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-.main{
+.Home{
    position: relative;
    width: 100%;
    height: 100vh;
@@ -34,40 +34,51 @@ p{
 /*----------------------------------------------------
 ---------------------Menu
 ------------------------------------------------------*/
-nav {
-    display:flex ;
+/* Custom Styles */
+header {
+    background-color: rgb(208, 252, 252);
+  }
+  
+  nav ul li.current a {
+    color: darkturquoise !important; /* İlgili sayfa aktifken renk değişimi */
+  }
+  
+  nav {
+    display: flex;
+
     width: 84%;
     margin: auto;
     padding: 20px 0;
     align-items: center;
-    justify-content: space-between; 
-}
-
-
-nav ul li {
-
-    display: inline-block;
+    justify-content: space-between;
+  }
+  
+  nav ul {
+    display: flex;
+    padding: 0;
+  }
+  
+  nav ul li {
     list-style: none;
-    margin: 20px 50px;
-    
-}
-nav ul li a {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
     text-decoration: none;
-    color:#000;
+    color: #000000 !important; /* Normal metin rengi beyaz */
     font-weight: bold;
     transition: 0.4s;
-}
-nav ul li a:hover {
-    color:darkturquoise;
-
-}
-nav ul li.current a {
-    color:darkturquoise;/* İlgili sayfa aktifken renk değişimi */
-    
-}
-
-
-/*----------------------------------------------------
+  }
+  
+  nav ul li a:hover {
+    color: darkturquoise !important; /* Hover metin rengi darkturquoise */
+  }
+  
+  .navbar-brand img.logo {
+    width: 100px;
+    height: 150px;
+  }
+ /*----------------------------------------------------
 ---------------------Login Sayfası
 ------------------------------------------------------*/
 
@@ -94,28 +105,29 @@ nav ul li.current a {
 ---------------------Ana Ekranda Taitle
 ------------------------------------------------------*/
 
-.bilgiler{
+.bilgiler {
     margin-left: 8%;
-    margin-top:10%;
+    margin-top: 10%;
 }
 
-.bilgiler h3{
+.bilgiler h3 {
     font-size: 1.5rem;
-    
 }
-.bilgiler h4{
+
+.bilgiler h4 {
     font-size: 1.3rem;
     letter-spacing: 0.12rem;
     color: lightslategray;
     margin-left: 0.8rem;
+}
 
+.logo, .Baslik {
+    cursor: none;
 }
-.logo,.Baslik{
-    cursor:none;
-}
+
 /* Küçük ekranlarda resimlerin gizlenmesi */
-@media (max-width: 900px) {
-    .resimler img {
+@media (max-width: 1200px) {
+    .resimler {
         display: none;
     }
 }
@@ -123,16 +135,18 @@ nav ul li.current a {
 /*----------------------------------------------------
 ---------------------iletisim bilgiler
 ------------------------------------------------------*/
-.iletisim{
+.iletisim {
     margin-top: 2rem;
     margin-left: 2rem;
 }
+
 .iletisim img {
     margin-right: 3rem;
     width: 2.5rem;
     transition: 0.6s;
 }
-.iletisim img:hover{
+
+.iletisim img:hover {
     transform: scale(1.3); /*maus resimlere gelince resim 1.3 boyucek  */
 }
 
@@ -140,7 +154,7 @@ nav ul li.current a {
 ---------------------Ana Sayfada 2 resim
 ------------------------------------------------------*/
 
-.resimler{
+.resimler {
     width: 45%;
     height: 80%;
     position: absolute;
@@ -148,49 +162,117 @@ nav ul li.current a {
     right: 100px;
     margin-bottom: 15px;
 }
+
 .resimler img {
     height: 100%;
     position: absolute;
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
-    transition: bottom 1s,left 1s;
-
-
+    transition: bottom 1s, left 1s;
 }
-.resimler:hover .shape{
+
+.resimler:hover .shape {
     bottom: 40px;
-    
 }
-.resimler:hover .Selim{
+
+.resimler:hover .Selim {
     left: 45%;
-    
 }
 
+/* Responsive CSS */
+@media (max-width: 1200px) {
+    .bilgiler {
+        margin-left: 5%;
+        margin-top: 5%;
+    }
 
-/*----------------------------------------------------
----------------------hakkimda kısmı
-------------------------------------------------------*/
+    .bilgiler h3 {
+        font-size: 1.2rem;
+    }
 
+    .bilgiler h4 {
+        font-size: 1rem;
+    }
+
+    .iletisim img {
+        width: 2rem;
+        margin-right: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .bilgiler {
+        margin-left: 2%;
+        margin-top: 2%;
+        text-align: center;
+    }
+
+    .bilgiler h3, .bilgiler h4 {
+        font-size: 1rem;
+        margin-left: 0;
+    }
+
+    .iletisim {
+        margin: 1rem auto;
+    }
+
+    .iletisim img {
+        margin: 0.5rem;
+        width: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .bilgiler h3, .bilgiler h4 {
+        font-size: 0.9rem;
+    }
+
+    .iletisim img {
+        width: 1.2rem;
+        margin: 0.3rem;
+    }
+}
 .hakkimda {
     background: lightskyblue;
     padding: 2rem;
-    display: flex;  
-    
-}
-.hakkimda .resim{
-    width: 25%;
+    display: flex;
+    flex-wrap: wrap; /* Eklendi: İçeriklerin sarmalanması için */
 }
 
-.hakkimda .resim img{
+.hakkimda .resim {
+    width: 100%; /* Eklendi: Varsayılan olarak tam genişlik */
+    display: flex;
+    justify-content: center; /* Eklendi: Resmi ortalamak için */
+}
+
+.hakkimda .resim img {
     width: 85%;
-    margin-left: 20rem;
-
+    max-width: 300px; /* Eklendi: Maksimum genişlik ayarı */
 }
-.hakkimda .text{
-    width: 25%;
-    margin-left: 40rem;
 
+.hakkimda .text {
+    width: 100%; /* Eklendi: Varsayılan olarak tam genişlik */
+    margin-top: 2rem; /* Eklendi: Resimden sonra boşluk */
+    text-align: center; /* Eklendi: Metni ortalamak için */
+}
+
+@media (min-width: 768px) {
+    .hakkimda {
+        flex-wrap: nowrap; /* Eklendi: Yatay düzen için */
+    }
+    .hakkimda .resim {
+        width: 25%;
+        justify-content: flex-end; /* Eklendi: Resmi sağa hizalamak için */
+    }
+    .hakkimda .resim img {
+        margin-left: 0; /* Eklendi: Soldan boşluk sıfırlamak için */
+    }
+    .hakkimda .text {
+        width: 50%;
+        margin-left: 2rem; /* Eklendi: Metin ve resim arasına boşluk */
+        text-align: left; /* Eklendi: Metni sola hizalamak için */
+    }
 }
 
 /*----------------------------------------------------
@@ -199,48 +281,66 @@ nav ul li.current a {
 
 .EtkinliklerHakinda {
     background: rgb(84, 178, 237);
-    
     padding: 2rem;
 }
+
 .EtkinliklerHakinda .text h1 {
     text-align: center;
 }
- .box{
+
+.box {
     display: flex;
-    justify-content:space-between;
+    flex-wrap: wrap; /* Eklendi: İçeriklerin sarmalanması için */
+    justify-content: center; /* Eklendi: İçeriklerin merkezde olması için */
 }
-.etkinlik_{
-    width: 300px;
+
+.etkinlik_ {
+    width: 100%;
+    max-width: 300px; /* Eklendi: Maksimum genişlik ayarı */
     background-color: lightcyan;
     border-radius: 20px;
     padding: 1.3rem 2rem;
-    text-align: center; 
-    margin-right: 2rem;
+    text-align: center;
+    margin: 1rem; /* Eklendi: Etrafına boşluk */
 }
-.box p{
+
+.box p {
     letter-spacing: 1px;
     line-height: 1.3rem;
     font-size: 1rem;
     margin: 10px;
     color: darkslateblue;
 }
-.EtkinliklerHakinda .etkinlik_ img{
-    
-    margin: 2rem auto; /* Resmi yatay olarak ortalamak  */
-    
 
+.EtkinliklerHakinda .etkinlik_ img {
+    margin: 2rem auto; /* Resmi yatay olarak ortalamak */
 }
 
+@media (min-width: 768px) {
+    .box {
+        justify-content: space-between; /* Eklendi: İçeriklerin eşit aralıklı olması için */
+    }
 
+    .etkinlik_ {
+        width: calc(50% - 2rem); /* Eklendi: Ekran genişliğine göre genişlik ayarı */
+    }
+}
+
+@media (min-width: 1024px) {
+    .etkinlik_ {
+        width: calc(33.333% - 2rem); /* Eklendi: Daha geniş ekranlar için genişlik ayarı */
+    }
+}
 
 /*----------------------------------------------------
 ---------------------Etkinlikler
 ------------------------------------------------------*/
+
 .about_section {
     width: 100%;
     float: left;
     padding-bottom: 90px;
-    background-color:lightskyblue;
+    background-color: lightskyblue;
 }
 
 .about_section_2 {
@@ -248,6 +348,7 @@ nav ul li.current a {
     float: left;
     padding-top: 90px;
     display: flex;
+    flex-direction: column; /* Eklendi: İçerikleri dikey olarak hizalamak için */
     justify-content: center;
     align-items: center;
     position: relative;
@@ -261,6 +362,7 @@ nav ul li.current a {
     text-transform: uppercase;
     font-weight: bold;
     padding-bottom: 0px;
+    text-align: center; /* Eklendi: Başlık ortalama */
 }
 
 .bulit_icon {
@@ -269,8 +371,9 @@ nav ul li.current a {
 }
 
 .about_taital_box {
-    width: 350px;
-    height: 350px;
+    width: 100%; /* Eklendi: Varsayılan olarak tam genişlik */
+    max-width: 350px; /* Eklendi: Maksimum genişlik ayarı */
+    height: auto; /* Eklendi: Yüksekliği otomatik ayarlamak */
     background-color: lightcyan;
     padding: 40px 20px 30px 20px;
     box-shadow: 0px 0px 30px 0px;
@@ -278,16 +381,22 @@ nav ul li.current a {
     position: relative; /* Kutu için konumlandırma */
     left: 0; /* Başlangıç konumu */
     transition: left 1s, opacity 1s; /* Geçiş animasyonu */
+    margin: 20px; /* Eklendi: Kutular arasında boşluk */
 }
 
 .image_iman {
-    margin-right: 80px;
+    margin: 0 auto 20px; /* Eklendi: Alt ve üst boşluk ile ortalama */
+    display: flex;
+    justify-content: center; /* Eklendi: İçeriği ortalamak */
+    align-items: center; /* Eklendi: İçeriği ortalamak */
+    width: 100%; /* Eklendi: Varsayılan olarak tam genişlik */
+    max-width: 700px; /* Eklendi: Maksimum genişlik ayarı */
 }
 
 .about_img {
     width: 100%;
     max-width: 700px;
-    border: 5px ;
+    border: 5px;
     border-radius: 10px;
     transition: transform 1s; /* Resim için geçiş animasyonu */
 }
@@ -299,18 +408,16 @@ nav ul li.current a {
     transform: scale(1.3); /* Ölçeklendirme efekti */
 }
 
-
 .about_taital_box:hover {
     opacity: 0.8; /* Şeffaflık efekti */
 }
-
 
 .about_taital_1 {
     width: 100%;
     float: left;
     font-size: 30px;
     color: rgb(2, 89, 89);
-    text-align: center; /* Eklendi */
+    text-align: center;
 }
 
 .about_text {
@@ -319,13 +426,12 @@ nav ul li.current a {
     font-size: 16px;
     color: darkcyan;
     margin: 0px;
-    text-align: center; /* Eklendi */
+    text-align: center;
 }
 
 .readmore_btn {
     width: 170px;
-    margin: 40px auto; /* Değiştirildi */
-    text-align: center;
+    margin: 40px auto;
 }
 
 .readmore_btn a {
@@ -334,22 +440,51 @@ nav ul li.current a {
     font-size: 18px;
     color: darkblue;
     text-transform: uppercase;
-    border-radius: 5px;
-    border: 1px solid darkblue;
+    text-decoration: none;
+    border-radius: 15px;
+    background-color: lightblue;
+    border: 5px solid lightskyblue;
     padding: 10px;
     text-align: center;
+    transition: 0.6s;
+    border: 3px solid transparent; /*diğer nav elemanları hareket etmesin diye şeffaf 2px ekliyoruz*/
 }
 
 .readmore_btn a:hover {
     color: #4a4949;
-    border: 1px solid #4a4949;
-    
+    border: 3px solid #4a4949;
+    background-color: transparent;
 }
 
+/* Responsive CSS */
+@media (min-width: 768px) {
+    .about_section_2 {
+        flex-direction: row; /* Eklendi: Orta ve büyük ekranlar için yatay hizalama */
+    }
 
+    .about_taital_box {
+        width: 350px; /* Eklendi: Orta ve büyük ekranlar için kutu genişliği */
+        margin: 0 20px; /* Eklendi: Kutular arasında yatay boşluk */
+    }
 
+    .image_iman {
+        margin: 0 20px 0 0; /* Eklendi: Resim ve kutu arasına yatay boşluk */
+    }
+}
 
+@media (min-width: 1024px) {
+    .about_taital {
+        font-size: 50px; /* Eklendi: Büyük ekranlar için başlık boyutu */
+    }
 
+    .about_taital_1 {
+        font-size: 35px; /* Eklendi: Büyük ekranlar için alt başlık boyutu */
+    }
+
+    .about_text {
+        font-size: 18px; /* Eklendi: Büyük ekranlar için metin boyutu */
+    }
+}
 /*----------------------------------------------------
 ---------------------Footer Kısmı
 ------------------------------------------------------*/

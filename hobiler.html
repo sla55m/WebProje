@@ -5,9 +5,11 @@
       <meta charset="utf-8">
      
       <!-- bootstrap css -->
-      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap-grid.min.css">
       <!-- style css -->
       <link rel="stylesheet" href="fotografsilik.css">
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
 
       <link rel="stylesheet" href="hobiler.css">
 
@@ -16,23 +18,41 @@
       
    </head>
    <body>
-      <nav>
-            
-         <img  class="logo" src="resimler/dikeylogo.png" alt="saü logo" width="150px" height="200px">
-         <ul>
-             <li><a href="Home.html">Home</a></li>
-             <li><a href="ozgecmis.html  ">CV</a></li>
-             <li><a href="Sehir.html">Şehir</a></li>
-             <li><a href="Takimim.html">Takımım</a></li>
-             <li class="current"><a href="hobiler.html">Eğlence Köşesi </a></li>
-             <li><a href="ilgialanlarim.html">ilgi alanlarım</a></li>
-             <li><a href="iletisim.html">İletişim</a></li>
-         </ul>
-
- 
-    
-   
-    </nav>
+      <header>
+         <nav class="navbar navbar-expand-lg navbar-light">
+             <a class="navbar-brand" href="Home.html">
+                 <img class="logo" src="resimler/dikeylogo.png" alt="saü logo">
+             </a>
+             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                 <span class="navbar-toggler-icon"></span>
+             </button>
+             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                 <ul class="navbar-nav">
+                     <li class="nav-item">
+                         <a class="nav-link" href="Home.html">Home</a>
+                     </li>
+                     <li class="nav-item ">
+                         <a class="nav-link" href="ozgecmis.html">CV</a>
+                     </li>
+                     <li class="nav-item">
+                         <a class="nav-link" href="Sehir.html">Şehir <span class="sr-only">(current)</span></a>
+                     </li>
+                     <li class="nav-item">
+                         <a class="nav-link" href="Takimim.html">Takımım</a>
+                     </li>
+                     <li class="nav-item current">
+                         <a class="nav-link" href="hobiler.html">Eğlence Köşesi</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="fotografsilik.html">Galeri</a>
+                    </li>
+                     <li class="nav-item">
+                         <a class="nav-link" href="iletisim.html">İletişim</a>
+                     </li>
+                 </ul>
+             </div>
+         </nav>
+       </header>
 
       
    
@@ -41,19 +61,20 @@
          <div class="container">
              <div class="row">
                  <div class="col-md-12">
-                     <h1 class="about_taital">Hobilerim ve Eğlence Alanım</h1>
+                     <h1 class="about_taital">Hobilerim ve İlgi Alanım</h1>
                      <div class="bulit_icon"><img src="resimler/icon/bulit-icon.png"></div>
                  </div>
              </div>
              <div class="blog_section_2">
                  <div class="row">
-                     <div class="blog_box">
-                         <div class="blog_img"><img src="resimler/spor/2024-03-06 18.51.jpeg"></div>
-                         <h4 class="date_text">Eğlence</h4>
-                         <h4 class="prep_text">Futbol</h4>
-                         <p class="lorem_text">Futbol oynamak yerine izlemeyi tercih ediyorum; ancak sıradan seyretmekten ziyade, maçları analiz etmek ve gidişatını tahmin etmek benim için daha keyifli.</p>
-                         <div class="read_bt"><a href="#">Read More</a></div>
-                     </div>
+                    <div class="blog_box" >
+                        <div class="blog_img"><img src="resimler/Hobi/161aa0de57c8a1d1929fa55912876add.jpg" style="height: 480px; width: 500px;"></div>
+                        <h4 class="date_text">Eğlence </h4>
+                        <h4 class="prep_text">Anime</h4>
+                        <p class="lorem_text">Animeyi sevmemin sebeplerinden biri, her zaman beni şaşırtacak ve düşündürecek gizemli ve ilginç hikayelerin olması. Karakterlerin derinlikli arka planları ve karmaşık ilişkileri de ayrıca merakımı sürekli canlı tutuyor.</p>
+                        <div class="read_bt"><a href="ilgialanlarim.html">Read More</a></div>
+                    </div>
+                  
                      <div class="blog_box">
                          <div class="blog_img"><img src="resimler/Hobi/2.JPG"></div>
                          <h4 class="date_text">Hobi</h4>
@@ -76,7 +97,7 @@
                          <div class="read_bt"><a href="#">Read More</a></div>
                      </div>
                      <div class="blog_box">
-                         <div class="blog_img"><img src="resimler/ins/19.jpg"></div>
+                         <div class="blog_img"><img src="resimler/ins/19.jpg" style="height: 480px; width: 500px;"></div>
                          <h4 class="date_text">Hobi</h4>
                          <h4 class="prep_text">Kitap Okumak</h4>
                          <p class="lorem_text">Kitap okuma, bireyin kişisel, zihinsel ve duygusal gelişimine büyük katkılar sağlar. Günlük yaşamımızda kitaplara daha fazla yer açmak, hayatımızı zenginleştirecek ve bizi daha bilinçli, empatik ve yaratıcı bireyler haline getirecektir.</p>
@@ -87,12 +108,22 @@
                          <h4 class="date_text">Eğlence</h4>
                          <h4 class="prep_text">Basketbol</h4>
                          <p class="lorem_text">Hız, çeviklik, koordinasyon, dayanıklılık ve güç gibi fiziksel özelliklerin yanı sıra, konsantrasyon, takım çalışması, strateji ve hızlı karar verme gibi zihinsel yetenekleri de gerektirir.</p>
-                         <div class
-     
-
-
-    
-
-  
+                         <div class="read_bt"><a href="#">Read More</a></div>
+                     </div>
+              
+                    <div class="blog_box">
+                        <div class="blog_img"><img src="resimler/spor/2024-03-06 18.51.jpeg"></div>
+                        <h4 class="date_text">Eğlence</h4>
+                        <h4 class="prep_text">Futbol</h4>
+                        <p class="lorem_text">Futbol oynamak yerine izlemeyi tercih ediyorum; ancak sıradan seyretmekten ziyade, maçları analiz etmek ve gidişatını tahmin etmek benim için daha keyifli.</p>
+                        <div class="read_bt"><a href="https://youtu.be/flchbNdIJzM" target="_blank">Read More</a></div>
+                    </div>
+                 </div>
+             </div>
+         </div>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
    </body>
 </html>

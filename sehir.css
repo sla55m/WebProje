@@ -1,38 +1,267 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: lightcyan;
+  margin: 0;
+  padding: 0;
+  background-color: lightcyan;
+  font-family: 'Poppins', sans-serif;
+
 }
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+ul {
+  margin-bottom: 0px;
+}
+
+p {
+  font-size: 14px;
+  line-height: 25px;
+  color: #2a2a2a;
+}
+
+
+/*
+---------------------------------------------
+------------------header
+---------------------------------------------
+*/
+header {
+  background-color: rgb(208, 252, 252);
+}
+
 nav ul li.current a {
-  color:darkturquoise;/* İlgili sayfa aktifken renk değişimi */
+  color: darkturquoise !important; /* İlgili sayfa aktifken renk değişimi */
 }
-nav{
-  display:flex ;
+
+nav {
+  display: flex;
   width: 84%;
   margin: auto;
   padding: 20px 0;
   align-items: center;
   justify-content: space-between;
+}
+
+nav ul {
+  display: flex;
+  padding: 0;
+}
+
+nav ul li {
+  list-style: none;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000000 !important; /* Normal metin rengi beyaz */
+  font-weight: bold;
+  transition: 0.4s;
+}
+
+nav ul li a:hover {
+  color: darkturquoise !important; /* Hover metin rengi darkturquoise */
+}
+
+.navbar-brand img.logo {
+  width: 100px;
+  height: 150px;
+}
+
+
+
+
+/*
+---------------------------------------------
+------------------Explore
+---------------------------------------------
+*/
+.section{
+  background-color: rgb(190, 237, 252);
+}
+#explore {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  border-bottom: 3px dotted #b3b3b3;
+}
+
+#explore .left-content {
+  margin-right: 30px;
+}
+
+#explore .left-content h2 {
+  font-size: 34px;
+  font-weight: 700;
+  color: #2a2a2a;
+}
+
+#explore .left-content span {
+  font-size: 14px;
+  color: #aaaaaa;
+  font-weight: 500;
+  display: block;
+  margin-top: 25px;
+}
+
+#explore .left-content .quote {
+  margin-top: 25px;
+}
+
+#explore .left-content .quote i {
+  float: left;
+  font-size: 32px;
+  margin-right: 15px;
+  margin-top: 10px;
+}
+
+#explore .left-content .quote p {
+  font-style: italic;
+  color: #2a2a2a;
+  font-weight: 500;
+}
+
+#explore .left-content p {
+  font-size: 14px;
+  color: #aaaaaa;
+  font-weight: 500;
+  display: block;
+  margin-top: 25px;
+}
+
+#explore .left-content .main-border-button a {
+  color: #2a2a2a;
+  border-color: #2a2a2a;
+  margin-top: 35px;
+}
+
+#explore .left-content .main-border-button a:hover {
+  background-color: #2a2a2a;
+  color: #fff;
+}
+
+#explore img {
+  width: 100%;
+  overflow: hidden;
+}
+
+#explore .leather {
+  margin-bottom: 30px;
+}
+
+#explore .first-image {
+  margin-bottom: 30px;
+}
+
+#explore .leather,
+#explore .types {
+  min-height: 255px;
+  background-color: #f8f8f8;
+  text-align: center;
+  width: 100%;
+}
+
+#explore .leather h4,
+#explore .types h4 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2a2a2a;
+  padding-top: 90px;
+  margin-bottom: 5px;
+}
+
+#explore .leather span,
+#explore .types span {
+  font-size: 14px;
+  font-style: italic;
+  color: #aaa;
+  font-weight: 500;
+}
+
+
+.main-border-button{
+  width: 190px;
+  margin: 40px auto; 
+  
+
+}
+
+.main-border-button a {
+  width: 100%;
+  float: left;
+  font-size: 18px;
+  color: darkblue;
+  text-transform: uppercase;
+  text-decoration: none;
+  
+
+  border-radius: 15px;
+  background-color: lightblue;
+  border: 5px solid lightskyblue;
+  padding: 10px;
+  text-align: center;
+  transition: 0.6s;
+  border: 3px solid transparent; /*diğer nav elemanları harketmesin diye şifaf 2px ekliyoruz  */
+
+}
+
+.main-border-buttona:hover {
+  color: #4a4949;
+  border: 3px solid #4a4949;
+  background-color: transparent;
+
   
 }
 
 
-nav ul li {
-  display: inline-block;
-  list-style: none;
-  margin: 20px 50px;
-}
-nav ul li a {
-  text-decoration: none;
-  color:#000;
-  font-weight: bold;
-  transition: 0.4s;
-}
-nav ul li a:hover {
-  color:darkturquoise;
+/*
+---------------------------------------------
+------------------slider
+---------------------------------------------
+*/
 
+.slider {
+  width: 80%;
+  max-width: 800px;
+  overflow: hidden;
+  position: relative;
 }
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.slide img {
+  width: 100%;
+  display: block;
+}
+
+.controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.controls button {
+  background-color: rgba(255, 255, 255, 0.463);
+  border: none;
+  color: #333;
+  padding: 10px 15px;
+  width: 50px;
+  cursor: pointer;
+}
+      
+
+
 
 .gallery {
     display: flex;

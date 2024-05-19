@@ -1,43 +1,61 @@
 body {
-    background-color: lightcyan;
-    display: flex;
-    flex-direction: column; 
-    justify-content: flex-start; 
-    align-items: center;
-    min-height: 100vh;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: lightcyan;
+
+ 
 }
 
-nav ul li.current a {
-    color:darkturquoise;/* İlgili sayfa aktifken renk değişimi */
-}
-nav{
-    display:flex ;
+
+/* Custom Styles */
+header {
+    background-color: rgb(208, 252, 252);
+  }
+  
+  nav ul li.current a {
+    color: darkturquoise !important; /* İlgili sayfa aktifken renk değişimi */
+  }
+  
+  nav {
+    display: flex;
+
     width: 84%;
     margin: auto;
     padding: 20px 0;
     align-items: center;
     justify-content: space-between;
-    
-}
-
-
-nav ul li {
-    display: inline-block;
+  }
+  
+  nav ul {
+    display: flex;
+    padding: 0;
+  }
+  
+  nav ul li {
     list-style: none;
-    margin: 20px 50px;
-}
-nav ul li a {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
     text-decoration: none;
-    color:#000;
+    color: #000000 !important; /* Normal metin rengi beyaz */
     font-weight: bold;
     transition: 0.4s;
-}
-nav ul li a:hover {
-    color:darkturquoise;
-
-}
+  }
+  
+  nav ul li a:hover {
+    color: darkturquoise !important; /* Hover metin rengi darkturquoise */
+  }
+  
+  .navbar-brand img.logo {
+    width: 100px;
+    height: 150px;
+  }
+   
 
 .main {
+
     position: relative;
     width: 100%;
     max-width: 1000px;

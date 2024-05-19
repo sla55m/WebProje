@@ -1,0 +1,96 @@
+@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css');
+        
+.custom-bootstrap * {
+    all: initial;
+}
+
+.custom-bootstrap .navbar,
+.custom-bootstrap .navbar-brand,
+.custom-bootstrap .navbar-nav,
+.custom-bootstrap .nav-item,
+.custom-bootstrap .nav-link,
+.custom-bootstrap .navbar-toggler,
+.custom-bootstrap .navbar-collapse,
+.custom-bootstrap .btn {
+    all: unset;
+}
+
+.custom-bootstrap .navbar {
+    display: flex;
+    width: 84%;
+    margin: auto;
+    padding: 20px 0;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(208, 252, 252);
+}
+
+.custom-bootstrap .navbar-nav {
+    display: flex;
+    padding: 0;
+}
+
+.custom-bootstrap .nav-item {
+    list-style: none;
+    margin: 0 15px;
+}
+
+.custom-bootstrap .nav-link {
+    text-decoration: none;
+    color: #000000 !important;
+    font-weight: bold;
+    transition: 0.4s;
+}
+
+.custom-bootstrap .nav-link:hover {
+    color: darkturquoise !important;
+}
+
+.custom-bootstrap .navbar-brand img.logo {
+    width: 100px;
+    height: 150px;
+}
+
+.custom-bootstrap .navbar-toggler {
+    border: none;
+    background: transparent;
+}
+
+.custom-bootstrap .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.custom-bootstrap .LoginSayfasi {
+    margin-left: auto;
+}
+
+.custom-bootstrap .btn {
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+}
+
+.custom-bootstrap .btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.custom-bootstrap .btn-secondary {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.custom-bootstrap .btn-primary:hover {
+    color: #fff;
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+.custom-bootstrap .btn-secondary:hover {
+    color: #fff;
+    background-color: #545b62;
+    border-color: #4e555b;
+}
