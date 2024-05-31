@@ -1,224 +1,273 @@
-/* General Styles */
+
+/* Genel Ayarlar */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  color: #333;
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5;
+  background-color: lightcyan;
 }
-
+/*
+---------------------------------------------
+------------------header
+---------------------------------------------
+*/
 header {
-  background-color: #d0fcfc;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: rgb(208, 252, 252);
 }
 
-/* Navbar Styles */
+nav ul li.current a {
+  color: darkturquoise !important; /* İlgili sayfa aktifken renk değişimi */
+}
+
 nav {
   display: flex;
-  justify-content: space-between;
+  width: 84%;
+  margin: auto;
+  padding: 20px 0;
   align-items: center;
-  padding: 10px 5%;
-}
-
-nav .navbar-brand img.logo {
-  width: 80px;
-  height: auto;
+  justify-content: space-between;
 }
 
 nav ul {
   display: flex;
-  list-style: none;
-  margin: 0;
   padding: 0;
 }
 
 nav ul li {
+  list-style: none;
   margin: 0 15px;
 }
 
 nav ul li a {
   text-decoration: none;
-  color: #333 !important;
+  color: #000000 !important; /* Normal metin rengi beyaz */
   font-weight: bold;
-  transition: color 0.3s;
+  transition: 0.4s;
 }
 
-nav ul li a:hover,
-nav ul li.current a {
-  color: darkturquoise !important;
+nav ul li a:hover {
+  color: darkturquoise !important; /* Hover metin rengi darkturquoise */
 }
 
-.navbar-toggler {
-  border: none;
-  background-color: transparent;
-  outline: none;
-}
-
-.navbar-toggler .navbar-toggler-icon {
-  color: #333;
-}
-
-/* Page Section Styles */
-section {
-  margin: 20px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 900px;
-}
-
-section h1,
-section h2,
-section h3 {
-  color: #333;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-section p {
-  margin-bottom: 20px;
-  line-height: 1.8;
-  color: #666;
-}
-
-/* Specific Sections */
-.Sayfa_Hakinda .title,
-.onemli_oyuncular .title {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: darkturquoise;
-}
-
-.basarlilar p,
-.dger_bilgiler p {
-  text-align: justify;
-}
-
-.dger_bilgiler img {
-  display: block;
-  max-width: 100%;
-  margin: 20px auto;
-  border-radius: 8px;
+.navbar-brand img.logo {
+  width: 100px;
+  height: 150px;
 }
 
 
-.onemli_oyuncular {
-  padding: 2rem;
-  background-color: #fff;
-  margin: 20px auto;
-  max-width: 1200px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-}
-
-.onemli_oyuncular .title {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.oyuncu {
-  margin-bottom: 2rem;
-}
-
-.oyuncu_resmi {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  border-radius: 10px;
-  display: block;
-  margin: 0 auto;
-}
-
-.oyuncu h3 {
-  text-align: center;
-  margin: 1rem 0;
-}
-
-.oyuncu p {
-  text-align: justify;
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-.onemli_oyuncular {
-  padding: 20px;
-  max-width: 1200px;
-  margin: auto;
-}
+/*
+---------------------------------------------
+------------------box
+---------------------------------------------
+*/
 
 .title {
   text-align: center;
+  margin-top: 20px;
+  font-size: 5em;
+  color: #333;
+}
+
+section {
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.box {
+
+  background-color: lightcyan;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.box h2 {
+  text-align: center;
   margin-bottom: 20px;
-  color: #343a40;
+  font-size: 3rem;
+  color: #333;
+  background-color: lightblue;
+}
+.box p{
+  font-size: 1.3rem;
+} 
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.oyuncu {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  margin-bottom: 40px;
-  padding: 40px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.takim_resmi, .oyuncu_resmi {
+  width: 45%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.oyuncu_adi {
-  margin-top: 0;
+.details {
+  width: 50%;
+  background-color: rgb(190, 233, 233);
+  padding: 20px;
+  box-shadow: 0 9px 8px rgba(0, 0, 0, 0.262);
+  border-radius: 1.6rem;
+}
+
+footer {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* Orta ve Büyük Cihazlar için Ayarlar */
+@media (min-width: 769px) {
+  .box {
+      width: 80%;
+      
+  }
+
+  .content {
+      flex-direction: row;
+  }
+
+  .takim_resmi, .oyuncu_resmi {
+      width: 45%;
+      max-width: 500px;
+  }
+
+  .details {
+      width: 50%;
+      padding-left: 20px;
+  }
+}
+
+/* Küçük Cihazlar için Ayarlar */
+@media (max-width: 1200px) {
+  .box {
+    width: 90%;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .takim_resmi, .oyuncu_resmi {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .details {
+    width: 100%;
+  }
+  
+}
+/* Telefonlar için Ayarlar */
+@media (max-width: 600px) {
+  .title {
+    font-size: 2.5em; /* Başlık boyutunu artırdık */
+    margin-top: 10px;
+  }
+
+  .box {
+    padding: 15px;
+  }
+
+  .box h2 {
+    font-size: 1.8rem; /* Başlık boyutunu artırdık */
+    margin-bottom: 15px;
+  }
+
+  .details {
+    padding: 15px;
+  }
+
+  .details p {
+    font-size: 1.2rem; /* Paragraf boyutunu artırdık */
+  }
+}
+
+
+/*
+------------------------------------
+----------------Footer
+------------------------------------
+*/
+footer {
+  background-color: #000000;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #fffefe;
+}
+
+footer h3 {
+  margin-bottom: 20px;
+  color: darkcyan;
+}
+
+footer p {
+  color: lightsteelblue;
+  margin-bottom: 5px;
+}
+
+footer .text h2 {
+  color: #fffefe;
+}
+
+footer .text span {
+  color: darkcyan;
+}
+
+footer .son {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+footer .siteHaritasi,
+footer .iletisim {
+  text-align: left;
+}
+
+footer .siteHaritasi ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex; /* Flexbox düzeni */
+  gap: 10px; /* Linkler arasındaki boşluk */
+}
+
+footer .siteHaritasi ul li {
+  display: inline; /* Yan yana gelmeleri için */
+  margin: 10px;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: #fffefe;
+}
+
+footer ul li a:hover {
   color: #007bff;
 }
 
-.oyuncu_resmi {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  display: block;
-  margin: 10px auto;
-  border-radius: 5px;
+footer .iletisim a {
+  display: inline-block;
+  margin-right: 10px;
 }
 
-.oyuncu_bilgileri {
-  text-align: justify;
-  color: #555;
+footer .iletisim img {
+  width: 24px;
+  height: 24px;
 }
 
-@media (min-width: 768px) {
-  .Takim_Hakkinda, .onemli_oyuncular {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .Takim_Hakkinda p, .oyuncu {
-    width: 48%;
-  }
-
-  .yasin_resmi, .Takim_resmi, .oyuncu_resmi {
-    max-width: 48%;
-  }
-}
-
-@media (max-width: 767px) {
-  .Takim_Hakkinda p, .oyuncu {
-    width: 100%;
-  }
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-  nav {
-      flex-direction: column;
-  }
-
-  .navbar-brand img.logo {
-      width: 60px;
-  }
-
-  .onemli_oyuncular .oyuncu {
-      flex-direction: column;
-      text-align: center;
-  }
-
-  .onemli_oyuncular .oyuncu img {
-      margin: 0 0 10px;
-  }
+footer .telifHakki {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #fffefe;
 }

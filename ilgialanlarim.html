@@ -2,10 +2,10 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>İlgi Alanları<main></main></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İlgi Alanları</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
-
+    <link rel="stylesheet" href="webcit.css">
     <link rel="stylesheet" href="ilgialanlarim.css">
 </head>
 <body>
@@ -19,14 +19,14 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item ">
+                    <li class="nav-item">
                         <a class="nav-link" href="Home.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="ozgecmis.html">CV</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Sehir.html">Şehir <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="Sehir.html">Şehir</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Takimim.html">Takımım</a>
@@ -34,7 +34,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="hobiler.html">Eğlence Köşesi</a>
                     </li>
-                    <li class="nav-item ">
+                    <li class="nav-item">
                         <a class="nav-link" href="fotografsilik.html">Galeri</a>
                     </li>
                     <li class="nav-item">
@@ -42,42 +42,98 @@
                     </li>
                 </ul>
             </div>
-          
         </nav>
-      </header>
-      <section class="main">
-        <div class="taitle">
-            <h1><span class="Baslik">İlgi <span class="renkli_kelime">Alanlarım</span>  </span></h1>
-    
+    </header>
+    <section class="main">
+        <div class="title">
+            <h1><span class="Baslik">İlgi <span class="renkli_kelime">Alanlarım</span></span></h1>
         </div>
         <div class="animeler"></div>
-         <script>
-            const list = document.querySelector(".animeler")
+        <button id="moreButton" class="btn btn-primary mt-3">Daha Fazla</button>
+    </section>
+    <footer>
+        <div class="text">
+            <h2><span>Selim</span> Altın</h2>
+            <p></p>
+        </div>
+        <div class="son">
+            <div class="siteHaritasi">
+                <h3>Site Haritası</h3>
+                <ul>
+                    <li >
+                        <a  href="Home.html">Home</a>
+                    </li>
+                    <li >
+                        <a  href="ozgecmis.html">CV</a>
+                    </li>
+                    <li >
+                        <a href="Sehir.html">Şehir </a>
+                    </li>
+                    <li >
+                        <a href="Takimim.html">Takımım</a>
+                    </li>
+                    <li >
+                        <a  href="hobiler.html">Eğlence Köşesi</a>
+                    </li>
+                    <li >
+                        <a  href="fotografsilik.html">Galeri</a>
+                    </li>
+                    <li >
+                        <a  href="iletisim.html">İletişim</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="iletisim">
+                <h3>İletişim Bilgileri</h3>
+                <a href="https://wa.me/+90551955749/" target="_blank"><img src="resimler/icon/Whatsapp_37229.png" alt="Whatsapp"></a>
+                <a href="https://www.instagram.com/1kur.an_/" target="_blank"><img src="resimler/icon/3721672-instagram_108066.png" alt="instagram"></a>
+                <a href="https://www.facebook.com/profile.php?id=100026062516271&locale=tr_TR" target="_blank"><img src="resimler/icon/1490889652-facebook_82510.png" alt="facebook"></a>
+                <a href="https://snapchat.com/t/XzbEllaz" target="_blank"><img src="resimler/icon/1490889713-snapchat_82531.png" alt="snapchat"></a>     
+            </div>
+        </div>
+        <div class="telifHakki">
+            <p>© 2024 Selim Altın. Tüm hakları saklıdır.</p>
+        </div>
     
-            fetch('https://anime-db.p.rapidapi.com/anime?page=1&size=20', { method: 'GET', headers: { 'x-rapidapi-key': '438dcaeabfmsh5af4e48c80209d2p1ba5e2jsn9ed7758bcbdd' } })
-                .then((response) => {
-                    return response.json()
-                })
-                .then(data => {
-                    data.data.map(function (anime) {
-                        list.innerHTML += ` <div>
-                                                <a href="${anime.link}"target="_blank"><img src="${anime.image}" alt=""></a>
-                                                <div className="info">
-                                                    <h5>${anime.title}</h5>
-                                                    <p>${anime.type}<span>${anime.ranking}</span></p>
-                                                </div>
-                                            </div>`;
-                        console.log(data);
-                    })
-                })
-                .catch(error => console.log(error));
-          </script>
+    <script>
+        const list = document.querySelector(".animeler");
+        let page = 1;
+        const pageSize = 20;
+        const apiKey = '438dcaeabfmsh5af4e48c80209d2p1ba5e2jsn9ed7758bcbdd';
 
-      </section>
+        function fetchAnimes() {
+            fetch(`https://anime-db.p.rapidapi.com/anime?page=${page}&size=${pageSize}`, { 
+                method: 'GET', 
+                headers: { 
+                    'x-rapidapi-key': apiKey 
+                } 
+            })
+            .then(response => response.json())
+            .then(data => {
+                data.data.forEach(anime => {
+                    list.innerHTML += `<div>
+                                            <a href="${anime.link}" target="_blank"><img src="${anime.image}" alt="${anime.title}"></a>
+                                            <div class="info">
+                                                <h5>${anime.title}</h5>
+                                                <p>${anime.type} <span>${anime.ranking}</span></p>
+                                            </div>
+                                        </div>`;
+                });
+            })
+            .catch(error => console.log(error));
+        }
+
+        document.getElementById('moreButton').addEventListener('click', () => {
+            page++;
+            fetchAnimes();
+        });
+
+        // Initial fetch
+        fetchAnimes();
+    </script>
     
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

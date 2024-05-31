@@ -1,15 +1,11 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: lightcyan;
-
- 
-}
-
-
-/* Custom Styles */
-header {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: lightcyan;
+  }
+  
+  header {
     background-color: rgb(208, 252, 252);
   }
   
@@ -19,7 +15,6 @@ header {
   
   nav {
     display: flex;
-
     width: 84%;
     margin: auto;
     padding: 20px 0;
@@ -39,7 +34,7 @@ header {
   
   nav ul li a {
     text-decoration: none;
-    color: #000000 !important; /* Normal metin rengi beyaz */
+    color: #000000 !important; /* Normal metin rengi siyah */
     font-weight: bold;
     transition: 0.4s;
   }
@@ -52,56 +47,46 @@ header {
     width: 100px;
     height: 150px;
   }
-   
-
-.main {
-
+  
+  .main {
     position: relative;
     width: 100%;
     max-width: 1000px;
     min-height: 1000px;
     background-color: #fff;
-    margin: 20px auto; 
+    margin: 20px auto;
     display: grid;
     grid-template-columns: 1fr 2fr;
     box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
-}
-
-/* Sol kısım stilleri */
-.Solkisim {
-    position: relative;
+  }
+  
+  .Solkisim {
     background-color: lightblue;
     padding: 35px;
-    
-}
-
-.profile_txt {
-    position: relative;
+  }
+  
+  .profile_txt {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 20px;
     border-bottom: 1px solid #fff;
-}
-
-.profile_resmi {
-    position: relative;
+  }
+  
+  .profile_resmi {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     overflow: hidden;
-}
-
-.profile_resmi img {
-    position: absolute;
-    top: 0;
-    left: 0;
+  }
+  
+  .profile_resmi img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-.profile_txt h2 {
+  }
+  
+  .profile_txt h2 {
     color: #000000;
     font-size: 1.5em;
     margin-top: 20px;
@@ -109,142 +94,250 @@ header {
     text-align: center;
     font-weight: 600;
     line-height: 1.4em;
-}
-
-.profile_txt h2 span {
+  }
+  
+  .profile_txt h2 span {
     font-size: 0.6em;
     font-weight: 300;
-}
-.İlitisim{
+  }
+  
+  .İlitisim {
     padding-top: 20px;
-}
-.title{
+  }
+  
+  .title {
     color: rgb(0, 0, 0);
     text-transform: uppercase;
-     letter-spacing: 1px;
-
-}
-.İlitisim ul {
+    letter-spacing: 1px;
+  }
+  
+  .İlitisim ul {
     padding-left: 0; /* Listenin sol kenar boşluğunu sıfırla */
     justify-content: space-between; /* Öğeler arasındaki mesafeyi artır */
     flex-wrap: wrap; /* Eğer ekran daralırsa öğelerin bir alt satıra geçmesini sağlar */
-
-
-}
-.İlitisim ul li {
+  }
+  
+  .İlitisim ul li {
     list-style: none;
     margin: 12px 0; /* Yukarı ve aşağı boşluk ayarla */
     flex: 1; /* Öğelerin esnek boyutlandırılmasını sağlar */
-    
-}
-.İlitisim ul li span{
+  }
+  
+  .İlitisim ul li span {
     font-weight: 400;
-}
-.egitim ul {
+  }
+  
+  .egitim ul {
     padding-left: 0; /* Listenin sol kenar boşluğunu sıfırla */
-
-}
-.egitim ul li {
+  }
+  
+  .egitim ul li {
     margin: 10px;
     list-style: none;
-}
-.egitim h5{
+  }
+  
+  .egitim h5 {
     color: dimgrey;
     font-weight: 800;
-
-}
-
-.egitim h4{
-    font-weight: 300;;
-}
-.Diller ul {
+  }
+  
+  .egitim h4 {
+    font-weight: 300;
+  }
+  
+  .Diller ul {
     padding-left: 0;
-}
-.Diller ul li {
+  }
+  
+  .Diller ul li {
     list-style: none;
     margin: 10px;
-}
-.Diller .yuzde{
+  }
+  
+  .Diller .yuzde {
     position: relative;
     width: 100%;
     height: 7px;
     background: lightcyan;
     display: block;
     margin-top: 5px;
-
-}
-.Diller .yuzde div{
+  }
+  
+  .Diller .yuzde div {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
-    background:darkslateblue;
-}
-
-
-.SagKisim {
-    position: relative;
+    background: darkslateblue;
+  }
+  
+  .SagKisim {
     background-color: rgb(248, 248, 233);
     padding: 40px;
-   
-}
-.Hakkımda {
+  }
+  
+  .Hakkımda {
     margin-bottom: 0;
-}
-.SagKisim .titleh2{
+  }
+  
+  .SagKisim .titleh2 {
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 15px;
     color: darkslateblue;
-
-}
-.Beceriler .yuzde{
+  }
+  
+  .Beceriler .yuzde {
     position: relative;
     width: 100%;
     height: 9px;
     background: lightsteelblue;
     display: block;
     margin-top: 5px;
-
-}
-
-.Beceriler ul {
+  }
+  
+  .Beceriler ul {
     padding-left: 0;
-}
-.Beceriler ul li {
+  }
+  
+  .Beceriler ul li {
     list-style: none;
     margin: 10px;
-}
-.Beceriler .yuzde div{
+  }
+  
+  .Beceriler .yuzde div {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
-    background:darkslateblue;
-}
-.SagKisim .Hakkımda p{
+    background: darkslateblue;
+  }
+  
+  .SagKisim .Hakkımda p {
     color: #333;
-}
-.İsDeneyim .is{
+  }
+  
+  .İsDeneyim .is {
     display: flex;
     flex-direction: row;
     margin: 20px 0;
-
-}
-.İsDeneyim .is .tarih-donem{
+  }
+  
+  .İsDeneyim .is .tarih-donem {
     min-width: 150px;
-
-}
-.İsDeneyim .is .tarih-donem h5{
+  }
+  
+  .İsDeneyim .is .tarih-donem h5 {
     text-transform: uppercase;
-    color: #8a8e90
-
-}
-.İsDeneyim .is .text h4{
+    color: #8a8e90;
+  }
+  
+  .İsDeneyim .is .text h4 {
     text-transform: uppercase;
     font-size: 15px;
-    color:lightseagreen;
-
-
-
-}
+    color: lightseagreen;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1366px) {
+    .main {
+      grid-template-columns: 1fr; /* Tek sütuna geçiş */
+    }
+  
+    .SagKisim, .Solkisim {
+      padding: 20px;
+    }
+  
+    .profile_txt h2 {
+      font-size: 1.2em;
+    }
+  
+    .profile_resmi {
+      width: 150px;
+      height: 150px;
+    }
+  
+    .Diller .yuzde {
+      height: 5px;
+    }
+  
+    .Beceriler .yuzde {
+      height: 7px;
+    }
+  
+    .SagKisim .Hakkımda p {
+      font-size: 0.9em;
+    }
+  
+    .İsDeneyim .is {
+      flex-direction: column;
+    }
+  
+    .İsDeneyim .is .tarih-donem, .İsDeneyim .is .text {
+      margin-bottom: 10px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+    }
+  
+    nav ul {
+      flex-direction: column;
+    }
+  
+    nav ul li {
+      margin: 10px 0;
+    }
+  
+    .main {
+      padding: 10px;
+      box-shadow: none;
+    }
+  
+    .profile_txt h2 {
+      font-size: 1em;
+    }
+  
+    .profile_resmi {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .Solkisim, .SagKisim {
+      padding: 10px;
+    }
+  
+    .İsDeneyim .is .tarih-donem {
+      min-width: 100px;
+    }
+  
+    .İsDeneyim .is .text h4 {
+      font-size: 1em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .profile_txt h2 {
+      font-size: 0.8em;
+    }
+  
+    .profile_resmi {
+      width: 80px;
+      height: 80px;
+    }
+  
+    .title, .titleh2 {
+      font-size: 1em;
+    }
+  
+    .İsDeneyim .is .tarih-donem h5 {
+      font-size: 0.9em;
+    }
+  
+    .İsDeneyim .is .text h4 {
+      font-size: 0.9em;
+    }
+  }
+  
